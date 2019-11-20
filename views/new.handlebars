@@ -1,34 +1,37 @@
 <!-- ./views/new.handlebars -->
-<div class="card">
-  <div class="card-body">
-    <form action="/restaurants" method="POST">
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="en_name" name="en_name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name">
-      </div>
-      <button type="submit">Create</button>
-    </form>
+<h1 class="mb-1 restaurant-show-title">新增餐廳資料</h1>
+<div class="container">
+  <div class="row">
+    <div class="card-body">
+      <form action="/restaurants" method="POST">
+        <div class="form-group">
+          <input type="text" placeholder="name" name="name">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="en_name" name="en_name">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="category" name="category">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="image" name="image">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="location" name="location">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="google_map" name="google_map">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="rating" name="rating">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="description" name="description">
+        </div>
+        <button type="submit">Create</button>
+      </form>
+    </div>
   </div>

@@ -1,35 +1,40 @@
 <!-- ./views/edit.handlebars -->
-<div class="card">
-  <div class="card-body">
-    <form action="/restaurants/{{{restaurants.id}}}/edit" method="POST">
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.name}}}">
+<h1 class="mb-1 restaurant-show-title">修改餐廳資料</h1>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <form action="/restaurants/{{{restaurants.id}}}/edit" method="POST">
+          <div class="form-group">
+            <input type="text" placeholder="name" name="name" value="{{{restaurants.name}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="name_en" name="name_en" value="{{{restaurants.name_en}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="category" name="category" value="{{{restaurants.category}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="image" name="image" value="{{{restaurants.image}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="location" name="location" value="{{{restaurants.location}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="phone" name="phone" value="{{{restaurants.phone}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="google_map" name="google_map" value="{{{restaurants.google_map}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="rating" name="rating" value="{{{restaurants.rating}}}">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="description" name="description" value="{{{restaurants.description}}}">
+          </div>
+          <button type="submit">Edit</button>
+        </form>
       </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.name_en}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.category}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.image}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.location}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.phone}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.google_map}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.rating}}}">
-      </div>
-      <div class="form-group">
-        <input type="text" placeholder="name" name="name" value="{{{restaurants.description}}}">
-      </div>
-      <button type="submit">Edit</button>
-    </form>
+    </div>
   </div>
 </div>
