@@ -1,0 +1,35 @@
+<!-- ./views/edit.handlebars -->
+<div class="card">
+  <div class="card-body">
+    <form action="/restaurants/{{{restaurants.id}}}/edit" method="POST">
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.name}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.name_en}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.category}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.image}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.location}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.phone}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.google_map}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.rating}}}">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="name" name="name" value="{{{restaurants.description}}}">
+      </div>
+      <button type="submit">Edit</button>
+    </form>
+  </div>
+</div>
