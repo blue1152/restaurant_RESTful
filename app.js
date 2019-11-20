@@ -35,32 +35,27 @@ db.once("open", () => {
 app.get("/", (req, res) => {
   Res.find((err, restaurants) => {
     if (err) return console.error(err);
-    return res.render("index", { restaurants: restaurants }); // 將資料傳給 index 樣板
+    return res.render("index", { restaurants: restaurants }); // 將資料傳給 index
   });
 });
 //搜尋框
-//get data from db
-let productList = {};
-Res.find(function(err, restaurants) {
-  if (err) {
-    console.error(err);
-  } else {
-    productList = restaurants;
-  }
-});
 app.get("/search", (req, res) => {
   const keyword = req.query.keyword;
-  const resSearch = productList.filter(result => {
-    if (keyword !== " ") {
-      return (
-        result.name.toLowerCase().includes(keyword.toLowerCase()) ||
-        result.category.toLowerCase().includes(keyword.toLowerCase())
-      );
+  const keywordRegex = new RegExp(keyword, "i"); //正規表達式
+  Res.find(
+    {
+      $or: [
+        { name: { $regex: keywordRegex, $options: "$i" } },
+        { category: { $regex: keywordRegex } }
+      ]
+    },
+    (err, restaurants) => {
+      if (err) return console.error(err);
+      return res.render("index", { restaurants, keyword });
     }
-  });
-  res.render("index", { restaurants: resSearch, keyword: keyword });
+  );
 });
-// 新增一筆
+// 新增一筆的頁面
 app.get("/restaurants/new", (req, res) => {
   res.render("new");
 });
