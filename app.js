@@ -4,10 +4,14 @@ const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Res = require("./models/res");
+const methodOverride = require("method-override");
 
 // setting template engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// 設定 method-override
+app.use(methodOverride("_method"));
 
 // setting static files
 app.use(express.static("public"));
@@ -92,7 +96,7 @@ app.get("/restaurants/:id/edit", (req, res) => {
   });
 });
 // 修改
-app.post("/restaurants/:id/edit", (req, res) => {
+app.put("/restaurants/:id/edit", (req, res) => {
   Res.findById(req.params.id, (err, restaurants) => {
     if (err) return console.error(err);
     restaurants.name = req.body.name;
@@ -111,7 +115,7 @@ app.post("/restaurants/:id/edit", (req, res) => {
   });
 });
 // 刪除
-app.post("/restaurants/:id/delete", (req, res) => {
+app.delete("/restaurants/:id/delete", (req, res) => {
   Res.findById(req.params.id, (err, restaurants) => {
     if (err) return console.error(err);
     restaurants.remove(err => {

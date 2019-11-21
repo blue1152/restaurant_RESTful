@@ -9,7 +9,9 @@
         <span class="text-secondary">
           <a href="/">back</a>
           <a href="/restaurants/{{{restaurants.id}}}/edit">edit</a>
-          <button type="submit" class="btn btn-warning">delete</button>
+          <form action="/todos/{{{todo.id}}}/delete?_method=DELETE" method="post" style="display: inline;">
+            <button type="submit" class="btn btn-warning">delete</button>
+          </form>
       </p>
 
       <p class="mb-1">
