@@ -30,15 +30,15 @@
               <i class="fas fa-utensils pr-2"></i> {{this.category}}
             </div>
 
-            <span class="badge badge-pill badge-danger font-weight-normal">
+            <span class="badge badge-pill badge-warning font-weight-normal">
               {{this.rating}}
               <i class="fas fa-star fa-xs"></i>
             </span>
 
             <!-- edit buttons -->
-            <div class="col-auto">
-              <a href="/restaurants/{{{this.id}}}" class="btn btn-secondary btn-sm">detail</a>
-              <a href="/restaurants/{{{this.id}}}/edit" class="btn btn-success btn-sm">edit</a>
+            <div class="col-auto" align="right">
+              <a href="/restaurants/{{{this.id}}}" class="btn btn-secondary btn-sm mr-2">detail</a>
+              <a href="/restaurants/{{{this.id}}}/edit" class="btn btn-success btn-sm mr-2">edit</a>
               <form action="/restaurants/{{{this.id}}}/delete?_method=DELETE" method="POST" style="display: inline;">
                 <button type="submit" class="btn btn-danger btn-sm">delete</button>
               </form>
