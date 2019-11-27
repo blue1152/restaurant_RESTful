@@ -36,11 +36,11 @@
             </span>
 
             <!-- edit buttons -->
-            <div class="mb-1">
-              <a href="/restaurants/{{{this.id}}}">detail</a>
-              <a href="/restaurants/{{{this.id}}}/edit">edit</a>
+            <div class="col-auto">
+              <a href="/restaurants/{{{this.id}}}" class="btn btn-secondary btn-sm">detail</a>
+              <a href="/restaurants/{{{this.id}}}/edit" class="btn btn-success btn-sm">edit</a>
               <form action="/restaurants/{{{this.id}}}/delete?_method=DELETE" method="POST" style="display: inline;">
-                <button type="submit" class="btn btn-warning">delete</button>
+                <button type="submit" class="btn btn-danger btn-sm">delete</button>
               </form>
             </div>
 

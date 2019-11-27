@@ -1,39 +1,61 @@
 <!-- ./views/edit.handlebars -->
 <h1 class="mb-1 restaurant-show-title">修改餐廳資料</h1>
-<div class="container">
+<div class="container mb-5">
   <div class="row">
-    <div class="card">
-      <div class="card-body">
-        <form action="/restaurants/{{{restaurants.id}}}/edit?_method=PUT" method="POST">
-          <div class="form-group">
-            <input type="text" placeholder="name" name="name" value="{{{restaurants.name}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="name_en" name="name_en" value="{{{restaurants.name_en}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="category" name="category" value="{{{restaurants.category}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="image" name="image" value="{{{restaurants.image}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="location" name="location" value="{{{restaurants.location}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="phone" name="phone" value="{{{restaurants.phone}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="google_map" name="google_map" value="{{{restaurants.google_map}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="rating" name="rating" value="{{{restaurants.rating}}}">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="description" name="description" value="{{{restaurants.description}}}">
-          </div>
-          <button type="submit" class="btn btn-info">Edit</button>
-        </form>
+    <div class="mx-auto">
+      <div class="card" style="width: 30rem">
+        <div class="card-body">
+          <form action="/restaurants/{{{restaurants.id}}}/edit?_method=PUT" method="POST" style="display: inline;">
+            <div class="mt-3 mb-5">
+              <div class="form-group">
+                <label for="name">餐廳名稱：</label>
+                <input type="text" class="form-control" placeholder="name" name="name" value="{{{restaurants.name}}}">
+              </div>
+              <div class="form-group">
+                <label for="name_en">餐廳英文名稱：</label>
+                <input type="text" class="form-control" placeholder="name_en" name="name_en"
+                  value="{{{restaurants.name_en}}}">
+              </div>
+              <div class="form-group">
+                <label for="category">分類：</label>
+                <input type="text" class="form-control" placeholder="category" name="category"
+                  value="{{{restaurants.category}}}">
+              </div>
+              <div class="form-group">
+                <label for="image">圖片網址：</label>
+                <input type="text" class="form-control" placeholder="image" name="image"
+                  value="{{{restaurants.image}}}">
+              </div>
+              <div class="form-group">
+                <label for="location">餐廳地址：</label>
+                <input type="text" class="form-control" placeholder="location" name="location"
+                  value="{{{restaurants.location}}}">
+              </div>
+              <div class="form-group">
+                <label for="phone">餐廳電話：</label>
+                <input type="text" class="form-control" placeholder="phone" name="phone"
+                  value="{{{restaurants.phone}}}">
+              </div>
+              <div class="form-group">
+                <label for="google_map">Google map位置：</label>
+                <input type="text" class="form-control" placeholder="google_map" name="google_map"
+                  value="{{{restaurants.google_map}}}">
+              </div>
+              <div class="form-group">
+                <label for="rating">評分：</label>
+                <input type="text" class="form-control" placeholder="rating" name="rating"
+                  value="{{{restaurants.rating}}}">
+              </div>
+              <div class="form-group">
+                <label for="description">餐廳簡介：</label>
+                <input type="text" class="form-control" placeholder="description" name="description"
+                  value="{{{restaurants.description}}}">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success mr-3">送出編輯內容</button>
+          </form>
+          <a href="/restaurants/{{{restaurants.id}}}" class="btn btn-secondary">取消編輯</a>
+        </div>
       </div>
     </div>
   </div>
