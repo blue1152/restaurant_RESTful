@@ -1,6 +1,9 @@
-# Ivy 的餐廳清單\_CRUD 版本
+# Ivy 的餐廳清單\_RESTful 版本
 
 利用 Node.js 跟 Express 建立簡單的伺服器，使用 mongoDB 作為資料庫，並搭配 Bootstrap 打造出餐廳清單
+與上一版(CRUD版本)的差異: 
+1. 獨立出routes資料夾, 路由設定從app.js轉移到home.js、restaurant.js
+2. 版面美化 & 優化使用者體驗
 
 ## 本專案所使用的套件
 
@@ -17,7 +20,7 @@
 打開終端機，輸入以下指令：
 
 ```
-$ git clone https://github.com/blue1152/restaurant_CRUD.git
+$ git clone https://github.com/blue1152/restaurant_RESTful.git
 ```
 
 ### 安裝 Node.js，並透過 npm 來安裝 package.json 檔案所定義的相依套件
@@ -32,6 +35,14 @@ $ nvm install 10.15.0
 
 ```
 $ npm install
+```
+
+### 建立資料庫中的種子資料
+
+打開終端機，在models/seeds目錄下，執行resSeeders.js來建立資料庫中的種子資料：
+
+```
+$ nodemon resSeeders.js
 ```
 
 ### 透過 nodemon 來啟動伺服器
