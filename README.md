@@ -1,7 +1,8 @@
 # Ivy 的餐廳清單\_RESTful 版本
 
-利用 Node.js 跟 Express 建立簡單的伺服器，使用 mongoDB 作為資料庫，並搭配 Bootstrap 打造出餐廳清單
-與上一版(CRUD版本)的差異: 
+- 利用 Node.js 跟 Express 建立簡單的伺服器，使用 mongoDB 作為資料庫，並搭配 Bootstrap 打造出餐廳清單
+
+- 與上一版(CRUD版本)的差異: 
 1. 獨立出routes資料夾, 路由設定從app.js轉移到home.js、restaurant.js
 2. 版面美化 & 優化使用者體驗
 
